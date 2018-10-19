@@ -43,7 +43,7 @@ def render_mtokm_result():
     try:
         mdist_result = float(request.args['mDist'])
         kmdist_result = mtokm(mtokm_result)
-        return render_template('mtokm.html')
+        return render_template('mtokm_result.html', mDist=mdist_result, kmdist=kmdist_result)
     except ValueError:
         return "Sorry: something went wrong."
 
