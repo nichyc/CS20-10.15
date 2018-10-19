@@ -42,19 +42,19 @@ def render_ctof_result():
 def render_mtokm_result():
     try:
         mdist_result = float(request.args['mDist'])
-        kmdist_result = mtokm(mtokm_result)
-        return render_template('mtokm_result.html', mDist=mdist_result, kmdist=kmdist_result)
+        kmdist_result = mtokm(mdist_result)
+        return render_template('mtokm_result.html', mDist=mdist_result, kmDist=kmdist_result)
     except ValueError:
         return "Sorry: something went wrong."
 
 def ftoc(ftemp):
-   return (ftemp-32.0)*(5.0/9.0)
+    return (ftemp-32.0)*(5.0/9.0)
     
 def ctof(ctemp):
-   return ((ctemp*(9.0/5.0))+32.0)
+    return ((ctemp*(9.0/5.0))+32.0)
 
 def mtokm(mdist):
-    return (mdist*1.61)
+    return mdist*1.61
     
 if __name__=="__main__":
     app.run(debug=True, port=5000)
