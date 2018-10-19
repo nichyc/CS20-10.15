@@ -54,7 +54,7 @@ def ctof(ctemp):
    return ((ctemp*(9.0/5.0))+32.0)
 
 def mtokm(mdist):
-    return mdist*1.61
+    return (mdist*1.61)
     
 if __name__=="__main__":
-    app.run(debug=False, port=54321)
+    app.run(debug=True, port=5000)
